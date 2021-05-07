@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#2b1055, #7597de);
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px 100px;
+  color: white;
+  z-index: 20;
+}
+
+header p {
+  font-size: 2em;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header li {
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 6px 15px;
+  transition: all 0.5s;
+  position: relative;
+}
+
+header ul li:hover {
+  background: #fff;
+  color: #2b1055;
+  transition: all 0.5s;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 50;
+}
+
+main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  scroll-behavior: smooth;
+}
+
+main #btn {
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+}
+
+main #stars {
+  z-index: -1;
+}
+
+main #moon {
+  mix-blend-mode: screen;
+}
+
+main #text {
+  position: absolute;
+  right: -300px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 6.5em;
+  z-index: 9;
+  transform: translateY(120px);
+}
+
+main #montauins_front {
+  z-index: 10;
+}
+
+section {
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+}
+
+section h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+section p {
+  font-size: 1em;
+  color: #fff;
+}
+
+/*EFFECT */
+
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
+
+[data-anime="left"] {
+  opacity: 0;
+  transform: translate3d(-150px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
