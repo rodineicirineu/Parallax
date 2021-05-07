@@ -47,7 +47,8 @@ header li {
   position: relative;
 }
 
-header ul li:hover {
+header ul li:hover,
+header ul .active {
   background: #fff;
   color: #2b1055;
   transition: all 0.5s;
@@ -85,21 +86,16 @@ main img {
   scroll-behavior: smooth;
 }
 
-main #btn {
-  text-decoration: none;
-  padding: 8px 30px;
-  border-radius: 40px;
-  background: #fff;
-  color: #2b1055;
-  font-size: 1.5em;
-}
-
 main #stars {
   z-index: -1;
 }
 
 main #moon {
   mix-blend-mode: screen;
+}
+
+main #montauins_front {
+  z-index: 10;
 }
 
 main #text {
@@ -112,8 +108,13 @@ main #text {
   transform: translateY(120px);
 }
 
-main #montauins_front {
-  z-index: 10;
+main #btn {
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
 }
 
 section {
